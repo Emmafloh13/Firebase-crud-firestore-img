@@ -49,7 +49,7 @@ const saveSubmit = (e) => {
 
 const uploadFileAction = (e) => {
     const file = e.target.files[0];
-    if(file.type.includes("image")){
+    if(file.type.includes('image')){
         console.log('si es una imagen');
         saveImage(file);
     }
@@ -63,7 +63,7 @@ window.addEventListener('DOMContentLoaded', async () => {
         const div = document.createElement('div');
         querySnapshot.forEach(doc => {
             const task = doc.data();
-            div.appendChild(card(doc.id, task.title, task.description))
+            div.appendChild(card(doc.id, task.title, task.description, task.imageUrl))
         });
         taskContainer.appendChild(div);
     });
