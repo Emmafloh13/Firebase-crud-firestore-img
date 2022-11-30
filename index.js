@@ -72,4 +72,3 @@ window.addEventListener('DOMContentLoaded', async () => {
     formTask.addEventListener('submit', saveSubmit);
     document.querySelector('#file-task').addEventListener('change', uploadFileAction);
 });
-
